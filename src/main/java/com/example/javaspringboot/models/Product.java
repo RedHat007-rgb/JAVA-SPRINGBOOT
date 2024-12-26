@@ -11,16 +11,18 @@ public class Product {
     private String title;
     private String description;
     private Double price;
+    private String imageUrl;
     private Category category;
 
     public Product(){
 
     }
-    public Product(Long id, String title, String description, Double price, Category category) {
+    public Product(Long id, String title, String description, Double price, Category category, String imageUrl) {
         this.id=id;
         this.title=title;
         this.description=description;
         this.category=category;
         this.price=price;
+        this.imageUrl=imageUrl;
     }
 }

@@ -1,23 +1,27 @@
 package com.example.javaspringboot.models;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+
 public class Category {
 
    private long id;
-   private String name;
+   private String title;
 
-   public long getId(){
+   public void setId(long id) {
+       this.id = id;
+   }
+   public void setTitle(String title) {
+       this.title = title;
+   }
+   public long getId() {
        return id;
    }
-
-   public void  setId(long id){
-        this.id=id;
+   public String getTitle() {
+       return title;
    }
 
-   public String getName(){
-       return name;
-   }
 
-   public void setName(String name){
-       this.name=name;
-   }
 }
