@@ -17,13 +17,15 @@ public class ProductController {
 
 
     @RequestMapping(value="/products",method=RequestMethod.POST)
-    public void createProduct(Product product){
-
+    public Product createProduct(@RequestBody Product product){
+        Product p =productService.createProduct(product.getId(),product.getTitle(),product.getPrice(),product.getDescription(),product.getImageUrl(),product.getCategory().getTitle());
+        return  p;
     }
 
-    @RequestMapping(value="/find",method= RequestMethod.GET)
-    public Product getProduct(){
-        return null;
+    @RequestMapping(value="/find/{id}",method= RequestMethod.GET)
+    public Product getProduct(@PathVariable long id){
+        Product p=productService.getSingleProduct(id);
+        return p;
     }
 
     @RequestMapping(value="/update",method= RequestMethod.PATCH)

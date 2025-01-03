@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProductService {
     Product getSingleProduct(long id);
     List<Product> getallProducts();
-    void createProduct(Product product);
+    Product createProduct(long id, String title, Double price, String description, String image, String category);
 }
